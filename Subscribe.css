@@ -1,0 +1,77 @@
+.subscribe-container {
+  padding: 2rem;
+  text-align: center;
+  background-size: cover;
+  color: white;
+  min-height: 100vh;
+  backdrop-filter: blur(4px);
+}
+
+.subscribe-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.subscribe-intro {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.plans-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.plan-card {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  padding: 2rem;
+  width: 300px;
+  text-align: left;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.free-plan {
+  border: 2px solid #00bfff;
+}
+
+.premium-plan {
+  border: 2px solid gold;
+}
+
+.plan-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.plan-card p {
+  margin: 0.5rem 0;
+}
+
+.plan-card h3 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.select-btn,
+.subscribe-btn {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.select-btn {
+  background-color: #00bfff;
+  color: white;
+}
+
+.subscribe-btn {
+  background-color: gold;
+  color: black;
+}

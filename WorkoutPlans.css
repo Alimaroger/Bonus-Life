@@ -1,0 +1,67 @@
+.plans-container {
+  padding: 2rem;
+  background-color: #f8f9fa;
+}
+
+.plans-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1a1a1a;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.plan-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.start-plan-button {
+  background-color: #007bff;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.start-plan-button:hover {
+  background-color: #0056b3;
+}
+
+.progress-wrapper {
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0.5rem 0;
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: #28a745;
+    transition: width 0.3s ease;
+}
+
+.subscriber-button {
+    background-color: #ffc107;
+    color: black;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+
+}
+
+.subscriber-button:hover {
+    background-color: #e0a800;
+}
