@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Bonus Life Fitness</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            color: #DC2626;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 600px;
+            height: 300px;
+            background-color: #fef2f2;
+            border-radius: 1rem;
+            margin: 2rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #DC2626;
+            font-size: 4rem;
+            color: #DC2626;
+        }
+
+        .section {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 25px rgba(220, 38, 38, 0.1);
+            border: 1px solid rgba(220, 38, 38, 0.1);
+            text-align: left;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #DC2626;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4rem;
+            height: 3px;
+            background-color: #EF4444;
+            border-radius: 2px;
+        }
+
+        .team-photo-section {
+            background-color: #fef2f2;
+            border-radius: 1rem;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 2px solid #DC2626;
+            text-align: center;
+        }
+
+        .team-photo-placeholder {
+            width: 100%;
+            max-width: 800px;
+            height: 400px;
+            background-color: #ffffff;
+            border-radius: 1rem;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px dashed #DC2626;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .team-member {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 2px solid #DC2626;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(220, 38, 38, 0.1);
+        }
+
+        .member-photo {
+            width: 120px;
+            height: 120px;
+            background-color: #fef2f2;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid #DC2626;
+            font-size: 3rem;
+            color: #DC2626;
+        }
+
+        .member-name {
+            color: #DC2626;
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .member-role {
+            color: #DC2626;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .member-id {
+            color: #6B7280;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .member-description {
+            font-size: 0.9rem;
+            color: #374151;
+            line-height: 1.5;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .process-card {
+            background-color: #fef2f2;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border-left: 4px solid #DC2626;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .process-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(220, 38, 38, 0.2);
+        }
+
+        .contact-section {
+            text-align: center;
+            background: linear-gradient(135deg, #fef2f2 0%, #ffffff 100%);
+        }
+
+        .contact-card {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 2px solid #DC2626;
+            max-width: 500px;
+            margin: 2rem auto;
+            box-shadow: 0 10px 25px rgba(220, 38, 38, 0.1);
+        }
+
+        .contact-button {
+            font-size: 1.2rem;
+            padding: 0.75rem 1.5rem;
+            background-color: #DC2626;
+            color: #ffffff;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .contact-button:hover {
+            background-color: #B91C1C;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(220, 38, 38, 0.3);
+        }
+
+        .strong {
+            color: #DC2626;
+            font-weight: 600;
+        }
+
+        .paragraph {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #374151;
+            text-align: center;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-title {
+            color: #DC2626;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-desc {
+            font-size: 0.9rem;
+            color: #6B7280;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title">About Us – Bonus Life Fitness</h1>
+            <div class="hero-image">
+                🏋️‍♂️💪🏃‍♀️
+            </div>
+            <p class="paragraph" style="font-size: 1.2rem; color: #6B7280; max-width: 800px; margin: 0 auto;">
+                Empowering healthier lifestyles through innovative fitness technology and personalized wellness solutions.
+            </p>
+        </header>
+
+        <section class="section">
+            <h2 class="section-title">Our Mission</h2>
+            <p class="paragraph">
+                At <span class="strong">Bonus Life</span>, our mission is to empower individuals across Cameroon 
+                and beyond to pursue a healthier lifestyle through accessible, culturally relevant, 
+                and technology-driven fitness solutions. Our web app delivers personalized fitness 
+                and nutrition plans, progress tracking, and community support — all built with care 
+                by a passionate team of student developers.
+            </p>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🎯</div>
+                    <h4 class="feature-title">Personalized</h4>
+                    <p class="feature-desc">Tailored fitness plans</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🌍</div>
+                    <h4 class="feature-title">Accessible</h4>
+                    <p class="feature-desc">Available everywhere</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🤝</div>
+                    <h4 class="feature-title">Community</h4>
+                    <p class="feature-desc">Support & motivation</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Our Team</h2>
+            <p class="paragraph">
+                We developed <span class="strong">Bonus Life Fitness Web App</span> as part of our group project 
+                at ICT University, using <span class="strong">Agile methodology</span> with two-week sprints, 
+                iterative development, and continuous feedback. Each team member played a key role 
+                in delivering the project.
+            </p>
+
+            <!-- Team Photo Section -->
+            <div class="team-photo-section">
+                <h3 style="color: #DC2626; margin-bottom: 1.5rem;">Our Team</h3>
+                <div class="team-photo-placeholder">
+                    <div style="font-size: 4rem; color: #DC2626;">👥</div>
+                    <p style="color: #DC2626; font-weight: 600; font-size: 1.2rem;">Team Group Photo</p>
+                    <p style="color: #6B7280; font-size: 0.9rem; max-width: 300px;">
+                        Professional team photo showcasing our dedicated group of student developers
+                    </p>
+                </div>
+            </div>
+
+            <!-- Individual Team Members -->
+            <div class="team-grid">
+                <!-- Scrum Master -->
+                <div class="team-member">
+                    <div class="member-photo">👨‍💼</div>
+                    <h4 class="member-name">ALIMA NKOUDOU ROGER</h4>
+                    <p class="member-role">Scrum Master</p>
+                    <p class="member-id">ICTU20223228</p>
+                    <p class="member-description">
+                        Leading the team with Agile methodologies, ensuring smooth sprint execution and removing blockers for optimal productivity.
+                    </p>
+                </div>
+
+                <!-- Product Owner -->
+                <div class="team-member">
+                    <div class="member-photo">👩‍💼</div>
+                    <h4 class="member-name">JOY ATEHBIH CHEBEGWEN</h4>
+                    <p class="member-role">Product Owner</p>
+                    <p class="member-id">ICTU20234316</p>
+                    <p class="member-description">
+                        Defining product vision and requirements, ensuring the app meets user needs and business objectives.
+                    </p>
+                </div>
+
+                <!-- Frontend Developer -->
+                <div class="team-member">
+                    <div class="member-photo">👩‍💻</div>
+                    <h4 class="member-name">MAKUETE LEKOGNIA MARIE MICHELLE</h4>
+                    <p class="member-role">Frontend Developer</p>
+                    <p class="member-id">ICTU20234486</p>
+                    <p class="member-description">
+                        Crafting beautiful and responsive user interfaces with modern React technologies and professional design principles.
+                    </p>
+                </div>
+
+                <!-- Backend Developer -->
+                <div class="team-member">
+                    <div class="member-photo">👨‍💻</div>
+                    <h4 class="member-name">ACHUH HOPE ANENG</h4>
+                    <p class="member-role">Backend Developer</p>
+                    <p class="member-id">ICTU20234204</p>
+                    <p class="member-description">
+                        Building robust backend systems with Firebase integration, ensuring secure data management and seamless user experiences.
+                    </p>
+                </div>
+
+                <!-- QA Engineer -->
+                <div class="team-member">
+                    <div class="member-photo">👨‍🔬</div>
+                    <h4 class="member-name">ACHATESE EMMANUEL ALOH</h4>
+                    <p class="member-role">QA & Testing Lead</p>
+                    <p class="member-id">ICTU20234354</p>
+                    <p class="member-description">
+                        Ensuring top-quality software through comprehensive testing strategies, bug detection, and quality assurance processes.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Our Process</h2>
+            <p class="paragraph">
+                Our development follows industry-standard Agile practices to ensure quality and timely delivery.
+            </p>
+            <div class="process-grid">
+                <div class="process-card">
+                    <div style="font-size: 2rem; margin-bottom: 1rem; text-align: center;">🏃‍♂️</div>
+                    <span class="strong">Sprint-based delivery:</span><br/>
+                    Two-week sprints with regular reviews and retrospectives.
+                </div>
+                <div class="process-card">
+                    <div style="font-size: 2rem; margin-bottom: 1rem; text-align: center;">🤝</div>
+                    <span class="strong">Collaboration:</span><br/>
+                    Daily stand-ups to share progress and address blockers.
+                </div>
+                <div class="process-card">
+                    <div style="font-size: 2rem; margin-bottom: 1rem; text-align: center;">💬</div>
+                    <span class="strong">User feedback:</span><br/>
+                    Iterative improvement based on feedback from pilot testers.
+                </div>
+                <div class="process-card">
+                    <div style="font-size: 2rem; margin-bottom: 1rem; text-align: center;">🔄</div>
+                    <span class="strong">Continuous integration:</span><br/>
+                    Frequent deployment updates using Firebase Hosting and Firestore.
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact-section">
+            <h2 class="section-title">Contact</h2>
+            <p class="paragraph">
+                Ready to start your fitness journey or have questions about our app?<br/>
+                We'd love to hear from you!
+            </p>
+            <div class="contact-card">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">📧</div>
+                <p style="margin-bottom: 1rem; color: #374151;">
+                    For inquiries or collaborations:
+                </p>
+                <a href="mailto:bonuslife.team@ictuniversity.edu" class="contact-button">
+                    bonuslife.team@ictuniversity.edu
+                </a>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
